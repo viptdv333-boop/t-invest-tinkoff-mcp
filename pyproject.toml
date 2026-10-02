@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "t-invest-tinkoff-mcp"
+version = "0.1.0"
+description = "MCP server for T-Invest (Tinkoff Invest): market data, portfolio and trading tools for AI clients"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.27", "httpx>=0.27"]
+
+[project.scripts]
+tinvest-mcp = "tinvest_mcp.server:main"
+
+[tool.setuptools]
+packages = ["tinvest_mcp"]
